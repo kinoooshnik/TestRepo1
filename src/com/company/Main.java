@@ -1,21 +1,19 @@
 package com.company;
-
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Stringen st = new Stringen(100, 202);
-        st.start();
+        System.out.println("ell");
+        Stringen strg = new Stringen(0, 10);
+        strg.start();
 
         Scanner in = new Scanner(System.in);
         String line;
-        while (!(line = in.nextLine()).equals("exit")) {
-            if (line.equals("Как закрыть долги?")) {
-                System.out.println(st.string);
-            }
-            else {
-                System.out.println(line);
-            }
+        while (!(line = in.nextLine()).equals("quit")){
+            System.out.println(strg.getString());
         }
+
     }
+
 }
