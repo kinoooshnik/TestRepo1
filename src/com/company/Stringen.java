@@ -3,20 +3,20 @@ package com.company;
 import java.util.Random;
 
 public class Stringen extends Thread {
-    int min;
-    int max;
-    String string;
+    private int min;
+    private int max;
+    private String string;
 
-    public void generate(){
+    // делает из this.string рандомную строку рандомной длины в интервале от this.min до this.max
+    private void generate(){
         Random rand = new Random();
-        String string = "";
+        string = "";
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
         int length = rand.nextInt((max - min) + 1) + min;
         for (int i = 0; i < length; ++i)
             string += alphabet.charAt(rand.nextInt(alphabet.length()));
 
-        this.string = string;
     }
 
     public String getString() {
